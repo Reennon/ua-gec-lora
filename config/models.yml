@@ -1,0 +1,22 @@
+gec_model:
+  # Change this value based on your model and your GPU VRAM pool.
+  n_gpu_layers: 8
+  # Should be between 1 and n_ctx, consider the amount of VRAM in your GPU.
+  n_batch: 512
+  temperature: 0
+  model_name: "ggml-model-f16.gguf" #'gemma-7b-it.gguf' #'neuralhermes-2.5-mistral-7b.Q5_K_M.gguf'
+  n_ctx: 4096
+  max_tokens: 512
+  top_p: 0.95
+  top_k: 20
+memory_model:
+  # Change this value based on your model and your GPU VRAM pool.
+  n_gpu_layers: 8
+  # Should be between 1 and n_ctx, consider the amount of VRAM in your GPU.
+  n_batch: 512
+  temperature: 0
+  model_name: 'neuralhermes-2.5-mistral-7b.Q5_K_M.gguf'
+  n_ctx: 2048
+  max_tokens: 512
+  top_p: 0.95
+  top_k: 20

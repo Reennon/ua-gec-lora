@@ -1,3 +1,3 @@
-[submodule "data"]
-	path = data
+[submodule "data/ua-gec"]
+	path = data/ua-gec
 	url = https://github.com/grammarly/ua-gec.git

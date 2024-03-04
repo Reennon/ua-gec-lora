@@ -15,14 +15,19 @@ pip install ua-gec
 ```
 Or, download a submodule, and install the `gec-ua` package from there:
 ```shell
-git submodule add https://github.com/grammarly/ua-gec.git ./data && \
-cd ./data/python && \
+git submodule add https://github.com/grammarly/ua-gec.git ./data/ua-gec && \
+cd ./data/ua-gec/python && \
 python setup.py develop  
 ```
 2. Install necessary packages with __pip-install__
 ```shell
 pip install -r requirements.txt
 ```
+3. Download and unpack pickled (one or many) gguf file to use the LLM locally
+    - Gemma 7b Instruct: https://huggingface.co/google/gemma-7b-it
+    - Gemma 7b Pre-trained: https://huggingface.co/google/gemma-7b
+    - Jaskier 7b DPO (Fine-tuned Mistral7B): https://huggingface.co/bardsai/jaskier-7b-dpo-v6.1 
+
 
 ### LLM Choise
 
