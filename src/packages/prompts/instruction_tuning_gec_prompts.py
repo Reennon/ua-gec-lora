@@ -12,7 +12,6 @@ Where ("CORRECTION") Specifies how the error should be corrected.
 Keep the original text, only correcting errors in it, without outputting this instructions.
 
 SOURCE: {query}
-ERROR_TYPES: {error_types}
 FINAL ANSWER:"""
 
     PROMPT = PromptTemplate(
