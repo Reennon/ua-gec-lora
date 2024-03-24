@@ -32,3 +32,9 @@ pip install -r requirements.txt
 ### LLM Choise
 
 For proper LLM we would need either to use Open-Source Multi-Language LLM, or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, in order for the model to understand ukrainian language. 
+
+### Output
+
+Generated corrected texts for documents in UA-GEC validation set are located in the [output folder] [https://github.com/Reennon/ua-gec-lora/tree/master/output]:
+    - [Mistral-7B without fine-tuning] [https://github.com/Reennon/ua-gec-lora/blob/master/output/raw-model.txt]
+    - [Mistral-7B LoRA Fine-tuned on 500 samples from training set with r=4] [https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-500.txt]
