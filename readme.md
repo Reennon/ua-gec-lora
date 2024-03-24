@@ -45,7 +45,7 @@ Generated corrected texts for documents in UA-GEC validation set are located in 
 
 Evaluation is implemented using [Errant](https://github.com/chrisjbryant/errant) taking [m2 file](https://github.com/osyvokon/unlp-2023-shared-task/blob/main/data/gec-only/valid.m2) from [UNLP-2023 Shared Task](https://github.com/osyvokon/unlp-2023-shared-task/tree/main) as the ground truth.
 
-For more details please check [Erran Evaluation notebook](https://github.com/Reennon/ua-gec-lora/blob/master/notebooks/errant-evaluation.ipynb).
+For more details please check [Errant Evaluation notebook](https://github.com/Reennon/ua-gec-lora/blob/master/notebooks/errant-evaluation.ipynb).
 
 The metrics output looks the following way:
 ```
