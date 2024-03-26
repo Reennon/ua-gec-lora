@@ -6,6 +6,7 @@ grammar correction on non-English languages. In this solution, we used [UA-GEC d
 
 The paper and dataset abstract can be checked here: https://www.grammarly.com/blog/engineering/ua-gec-2/ and here https://arxiv.org/pdf/2103.16997v2.pdf
 
+## ChatBot Application
 ### Installation
 
 1. Install ua-gec package or dataset. \
@@ -28,7 +29,7 @@ pip install -r requirements.txt
     - Gemma 7b Pre-trained: https://huggingface.co/google/gemma-7b
     - Jaskier 7b DPO (Fine-tuned Mistral7B): https://huggingface.co/bardsai/jaskier-7b-dpo-v6.1 
 
-
+## Fine-Tuning Research
 ### LLM Choice
 
 For proper LLM we would need either to use Open-Source Multi-Language LLM or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, for the model to understand Ukrainian language.
