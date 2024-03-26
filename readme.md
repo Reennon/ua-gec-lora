@@ -47,9 +47,10 @@ Fine-tuned models can be downloaded and tested from HuggingFace:
 
 Generated corrected texts for documents in the UA-GEC validation set are located in the [output folder](https://github.com/Reennon/ua-gec-lora/tree/master/output):
 - [Mistral-7B without fine-tuning](https://github.com/Reennon/ua-gec-lora/blob/master/output/raw-model.txt)
-- [Mistral-7B LoRA Fine-tuned on 500 samples from the training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-500.txt)
-- [Mistral-7B LoRA Fine-tuned on 1500 samples from the training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-1500.txt)
-- [Mistral-7B LoRA Fine-tuned on 1000 samples from the training set with r=8](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r8-1000.txt)
+- [Mistral-7B LoRA Fine-tuned with r=4 on 500 samples](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-500.txt)
+- [Mistral-7B LoRA Fine-tuned with r=8 on 500 samples](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r8-500.txt)
+- [Mistral-7B LoRA Fine-tuned with r=4 on 1500 samples](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-1500.txt)
+- [Mistral-7B LoRA Fine-tuned with r=8 on 1000 samples](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r8-1000.txt)
 
 ### Evaluation
 ----
