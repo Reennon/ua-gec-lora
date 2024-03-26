@@ -30,6 +30,8 @@ pip install -r requirements.txt
     - Jaskier 7b DPO (Fine-tuned Mistral7B): https://huggingface.co/bardsai/jaskier-7b-dpo-v6.1 
 
 ## Fine-Tuning Research
+The research and fine-tuning is done mostly on Kaggle, although some reusable code may be used in the applications code.
+
 ### LLM Choice
 
 For proper LLM we would need either to use Open-Source Multi-Language LLM or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, for the model to understand Ukrainian language.
@@ -42,6 +44,13 @@ Fine-tuned models can be downloaded and tested from HuggingFace:
 - [Mistral-7B LoRA Fine-tuned on 500 samples from the training set with r=8](https://huggingface.co/epekach/mistral-7b-ua-gec)
 - [Mistral-7B LoRA Fine-tuned on 1000 samples from the training set with r=8](https://huggingface.co/andrian-kr/mistral-7b-ua-gec)
 
+### Go-to Kaggle notebooks used for research
+----
+- [Training] (https://www.kaggle.com/code/romankovalchuk/lora-ua-gec-mistral-7b-training)
+- [Empirical Generation Evaluation] (https://www.kaggle.com/code/andriankr/lora-ua-gec-fine-tuned-inference-generation?rvi=1)
+- [Errant Evaluation] (https://www.kaggle.com/code/andriankr/errant-evaluation-ua-gec-dataset)
+- [Plots and Language Usage Similarity Evaluation] (https://www.kaggle.com/code/andriankr/models-output-analysis)
+- [Convert and Merge Adapter to GGUF (For Inference)](https://www.kaggle.com/code/romankovalchuk/merge-adapter-push-to-huggingface)
 ### Output
 ----
 
