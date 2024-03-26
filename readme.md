@@ -46,10 +46,10 @@ Fine-tuned models can be downloaded and tested from HuggingFace:
 
 ### Go-to Kaggle notebooks used for research
 ----
-- [Training] (https://www.kaggle.com/code/romankovalchuk/lora-ua-gec-mistral-7b-training)
-- [Empirical Generation Evaluation] (https://www.kaggle.com/code/andriankr/lora-ua-gec-fine-tuned-inference-generation?rvi=1)
-- [Errant Evaluation] (https://www.kaggle.com/code/andriankr/errant-evaluation-ua-gec-dataset)
-- [Plots and Language Usage Similarity Evaluation] (https://www.kaggle.com/code/andriankr/models-output-analysis)
+- [Training](https://www.kaggle.com/code/romankovalchuk/lora-ua-gec-mistral-7b-training)
+- [Empirical Generation Evaluation](https://www.kaggle.com/code/andriankr/lora-ua-gec-fine-tuned-inference-generation?rvi=1)
+- [Errant Evaluation](https://www.kaggle.com/code/andriankr/errant-evaluation-ua-gec-dataset)
+- [Plots and Language Usage Similarity Evaluation](https://www.kaggle.com/code/andriankr/models-output-analysis)
 - [Convert and Merge Adapter to GGUF (For Inference)](https://www.kaggle.com/code/romankovalchuk/merge-adapter-push-to-huggingface)
 ### Output
 ----
