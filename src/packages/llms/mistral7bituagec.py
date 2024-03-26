@@ -8,12 +8,12 @@ from langchain.llms.llamacpp import LlamaCpp
 from src.packages.constants.path_constants import PathConstants
 
 
-class Gemma7b(LLM):
+class Mistral7BITUAGEC(LLM):
     llama_cpp_model: LlamaCpp
 
     @property
     def _llm_type(self) -> str:
-        return "gemma"
+        return "mistral-7b-it-ua-gec"
 
     def _call(
         self,
@@ -40,7 +40,7 @@ class Gemma7b(LLM):
         model_name: str = model_parameters.get('model_name')
         model_path: str = os.path.join(path_constants.MODELS_FOLDER, model_name)
 
-        llm = Gemma7b(
+        llm = Mistral7BITUAGEC(
             llama_cpp_model=LlamaCpp(
                 model_path=model_path,
                 f16_kv=True,  # MUST set to True, otherwise you will run into problem after a couple of calls
@@ -48,6 +48,5 @@ class Gemma7b(LLM):
                 **model_parameters,
             )
         )
-
 
         return llm
