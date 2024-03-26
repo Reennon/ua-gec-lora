@@ -2,7 +2,7 @@ UA-GEC LoRA
 ----
 
 In this solution we researched the impact of LoRA fine-tuning method for LLMs; Test the impact, improvement on language understanding for 
-grammar correction on non-english languages. In this solution we used UA-GEC dataset, presented by grammarly: https://github.com/grammarly/ua-gec 
+grammar correction on non-English languages. In this solution, we used [UA-GEC dataset](https://github.com/grammarly/ua-gec), presented by Grammarly.
 
 The paper and dataset abstract can be checked here: https://www.grammarly.com/blog/engineering/ua-gec-2/ and here https://arxiv.org/pdf/2103.16997v2.pdf
 
@@ -31,7 +31,14 @@ pip install -r requirements.txt
 
 ### LLM Choise
 
-For proper LLM we would need either to use Open-Source Multi-Language LLM, or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, in order for the model to understand ukrainian language. 
+For proper LLM we would need either to use Open-Source Multi-Language LLM, or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, in order for the model to understand ukrainian language.
+
+### Fine-tuned models
+----
+
+Fine-tuned models can be downloaded and tested from HuggingFace:
+- [Mistral-7B LoRA Fine-tuned on 1500 samples from the training set with r=4](https://huggingface.co/rkovalchuk/mistral-7b-ua-gec)
+- [Mistral-7B LoRA Fine-tuned on 1000 samples from the training set with r=8](https://huggingface.co/andrian-kr/mistral-7b-ua-gec)
 
 ### Output
 ----
@@ -39,9 +46,13 @@ For proper LLM we would need either to use Open-Source Multi-Language LLM, or ex
 Generated corrected texts for documents in UA-GEC validation set are located in the [output folder](https://github.com/Reennon/ua-gec-lora/tree/master/output):
 - [Mistral-7B without fine-tuning](https://github.com/Reennon/ua-gec-lora/blob/master/output/raw-model.txt)
 - [Mistral-7B LoRA Fine-tuned on 500 samples from training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-500.txt)
+- [Mistral-7B LoRA Fine-tuned on 1500 samples from training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-1500.txt)
+- [Mistral-7B LoRA Fine-tuned on 1000 samples from training set with r=8](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r8-1000.txt)
 
 ### Evaluation
 ----
+
+#### Errant
 
 Evaluation is implemented using [Errant](https://github.com/chrisjbryant/errant) taking [m2 file](https://github.com/osyvokon/unlp-2023-shared-task/blob/main/data/gec-only/valid.m2) from [UNLP-2023 Shared Task](https://github.com/osyvokon/unlp-2023-shared-task/tree/main) as the ground truth.
 
@@ -64,3 +75,7 @@ TP	FP	FN	Prec	Rec	F0.5
 Correction F0.5 is the primary metric used to compare models. To get a true positive (TP), the edit must match at least one of the annotators' edits exactly -- both the span and the suggested text.
 
 To get a TP in span-based detection, it is enough to correctly identify erroneous tokens. The actual correction doesn't matter here.
+
+#### Non-English words content similarity
+
+Observing a significant presence of the English language in the zero-shot model, along with insufficient generated text we decided to introduce a metric that will calculate the similarity with the target in terms of non-English words. You can explore the details in [Models output analysis notebook](https://github.com/Reennon/ua-gec-lora/blob/master/notebooks/models-output-analysis.ipynb)
