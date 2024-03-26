@@ -6,6 +6,7 @@ grammar correction on non-English languages. In this solution, we used [UA-GEC d
 
 The paper and dataset abstract can be checked here: https://www.grammarly.com/blog/engineering/ua-gec-2/ and here https://arxiv.org/pdf/2103.16997v2.pdf
 
+## ChatBot Application
 ### Installation
 
 1. Install ua-gec package or dataset. \
@@ -28,26 +29,27 @@ pip install -r requirements.txt
     - Gemma 7b Pre-trained: https://huggingface.co/google/gemma-7b
     - Jaskier 7b DPO (Fine-tuned Mistral7B): https://huggingface.co/bardsai/jaskier-7b-dpo-v6.1 
 
+## Fine-Tuning Research
+### LLM Choice
 
-### LLM Choise
-
-For proper LLM we would need either to use Open-Source Multi-Language LLM, or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, in order for the model to understand ukrainian language.
+For proper LLM we would need either to use Open-Source Multi-Language LLM or extend the tokenizer for pre-existing English LLM, like _Mistral-7B_, for the model to understand Ukrainian language.
 
 ### Fine-tuned models
 ----
 
 Fine-tuned models can be downloaded and tested from HuggingFace:
 - [Mistral-7B LoRA Fine-tuned on 1500 samples from the training set with r=4](https://huggingface.co/rkovalchuk/mistral-7b-ua-gec)
+- [Mistral-7B LoRA Fine-tuned on 500 samples from the training set with r=8](https://huggingface.co/epekach/mistral-7b-ua-gec)
 - [Mistral-7B LoRA Fine-tuned on 1000 samples from the training set with r=8](https://huggingface.co/andrian-kr/mistral-7b-ua-gec)
 
 ### Output
 ----
 
-Generated corrected texts for documents in UA-GEC validation set are located in the [output folder](https://github.com/Reennon/ua-gec-lora/tree/master/output):
+Generated corrected texts for documents in the UA-GEC validation set are located in the [output folder](https://github.com/Reennon/ua-gec-lora/tree/master/output):
 - [Mistral-7B without fine-tuning](https://github.com/Reennon/ua-gec-lora/blob/master/output/raw-model.txt)
-- [Mistral-7B LoRA Fine-tuned on 500 samples from training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-500.txt)
-- [Mistral-7B LoRA Fine-tuned on 1500 samples from training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-1500.txt)
-- [Mistral-7B LoRA Fine-tuned on 1000 samples from training set with r=8](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r8-1000.txt)
+- [Mistral-7B LoRA Fine-tuned on 500 samples from the training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-500.txt)
+- [Mistral-7B LoRA Fine-tuned on 1500 samples from the training set with r=4](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r4-1500.txt)
+- [Mistral-7B LoRA Fine-tuned on 1000 samples from the training set with r=8](https://github.com/Reennon/ua-gec-lora/blob/master/output/fine-tuned-r8-1000.txt)
 
 ### Evaluation
 ----

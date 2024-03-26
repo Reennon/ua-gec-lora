@@ -6,7 +6,7 @@ from langchain.memory import ConversationSummaryBufferMemory, RedisChatMessageHi
 from src.packages.chains.conversational_gec_chain import ConversationalGecChain
 from src.packages.constants.environ_constants import EnvironConstants
 from src.packages.constants.messages_constants import MessagesConstants
-from src.packages.llms.gemma7b import Gemma7b
+from src.packages.llms.mistral7bituagec import Mistral7BITUAGEC
 from src.packages.prompts.converstional_gec_prompts import ConversationalGecPromptWithMemory, \
     ConversationalGecPromptWithoutMemory
 from src.packages.sessions.session_manager import SessionManager
@@ -14,7 +14,7 @@ from src.packages.utils.parameter_server import ParameterServer
 
 
 class ChainController:
-    LLM = Gemma7b
+    LLM = Mistral7BITUAGEC
 
     def __init__(
         self,
